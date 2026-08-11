@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.8.2"
+  version: "0.8.3"
   jupyterlab_min: "4.6.0"
   jupyterlab_max: "4.7.0"
   jupyterlite_core_min: "0.8.1"
@@ -18,7 +18,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlite-pyodide-kernel/jupyterlite_pyodide_kernel-${{ version }}.tar.gz
-  sha256: 2fdbe6ec5e024dac08f2bd1b5199e1c0fa770851a1895949586ae1c9d2e85636
+  sha256: a863be962aaba5d442bfa7c7121be0a7926c1c3887bd703ec84cfc6b320dce0c
 
 build:
   number: 0
@@ -71,7 +71,7 @@ outputs:
     requirements:
       run:
         - ${{ pin_subpackage("jupyterlite-pyodide-kernel", exact=True) }}
-        - pyodide-lock-with-uv >=0.1.3,<0.2.0
+        - pyodide-lock-with-uv >=0.1.3,<0.3.0
     tests:
       - python:
           imports: jupyterlite_pyodide_kernel
