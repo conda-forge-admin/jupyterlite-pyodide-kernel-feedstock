@@ -2,9 +2,8 @@
 schema_version: 1
 
 context:
-  version: "0.8.4"
+  version: "0.8.5"
   jupyterlab_min: "4.6.3"
-  jupyterlab_max: "4.7.0"
   jupyterlite_core_min: "0.8.3"
   jupyterlite_core_max: "0.9.0"
   python_min_lock: "3.12"
