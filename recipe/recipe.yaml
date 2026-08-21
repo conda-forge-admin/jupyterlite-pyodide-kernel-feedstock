@@ -99,7 +99,8 @@ about:
   license_file:
     - LICENSE
     - jupyterlite_pyodide_kernel/labextension/static/third-party-licenses.json
-  homepage: https://github.com/jupyterlite/pyodide-kernel
+  homepage: https://pypi.org/project/jupyterlite-pyodide-kernel
+  repository: https://github.com/jupyterlite/pyodide-kernel
   documentation: https://jupyterlite-pyodide-kernel.rtfd.io
 
 extra:
