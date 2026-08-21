@@ -36,8 +36,8 @@ outputs:
           - jupyter-piplite = jupyterlite_pyodide_kernel.app:main
     requirements:
       host:
-        - hatchling >=1.4.0
-        - jupyterlab ${{ jupyterlab_min }}.*
+        - hatchling >=1.28.0
+        - jupyter-builder >=1.2.2
         - pip
         - python ${{ python_min }}.*
       run:
