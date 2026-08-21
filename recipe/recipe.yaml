@@ -2,10 +2,9 @@
 schema_version: 1
 
 context:
-  version: "0.8.4"
-  jupyterlab_min: "4.6.0"
-  jupyterlab_max: "4.7.0"
-  jupyterlite_core_min: "0.8.2"
+  version: "0.8.5"
+  jupyterlab_min: "4.6.3"
+  jupyterlite_core_min: "0.8.3"
   jupyterlite_core_max: "0.9.0"
   python_min_lock: "3.12"
   python_check_max: "3.14"
@@ -17,8 +16,8 @@ recipe:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/j/jupyterlite-pyodide-kernel/jupyterlite_pyodide_kernel-${{ version }}.tar.gz
-  sha256: 4aef491285e4eab1dd7a16394e303b4e095afce0a0721e13418ea55271d2ef9d
+  url: https://files.pythonhosted.org/packages/source/j/jupyterlite-pyodide-kernel/jupyterlite_pyodide_kernel-${{ version }}.tar.gz
+  sha256: f9d5b411ae30c6be1be26994597a5b6f0cdf50bdd7bf303e2146bfd370a67ec7
 
 build:
   number: 0
@@ -36,8 +35,8 @@ outputs:
           - jupyter-piplite = jupyterlite_pyodide_kernel.app:main
     requirements:
       host:
-        - hatchling >=1.4.0
-        - jupyterlab ${{ jupyterlab_min }}.*
+        - hatchling >=1.28.0
+        - jupyter-builder >=1.2.2
         - pip
         - python ${{ python_min }}.*
       run:
@@ -99,7 +98,8 @@ about:
   license_file:
     - LICENSE
     - jupyterlite_pyodide_kernel/labextension/static/third-party-licenses.json
-  homepage: https://github.com/jupyterlite/pyodide-kernel
+  homepage: https://pypi.org/project/jupyterlite-pyodide-kernel
+  repository: https://github.com/jupyterlite/pyodide-kernel
   documentation: https://jupyterlite-pyodide-kernel.rtfd.io
 
 extra:
